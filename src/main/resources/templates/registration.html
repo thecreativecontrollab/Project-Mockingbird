@@ -15,12 +15,11 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="/custom.js"></script>
 </head>
+
 <body>
 <body>
 	<div class="container">
 		<div th:replace="fragments/navbar"></div>
-
-		<div class="container">
 			<h2>Sign up</h2>
 			<form th:action="@{/signup}" th:object="${user}" method="post"
 				autocomplete="off">
