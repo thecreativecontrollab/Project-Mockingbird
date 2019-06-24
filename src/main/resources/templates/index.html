@@ -1,20 +1,12 @@
+    
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
-<head>
-	<title>Blog Project</title>
-    <div th:replace="/fragments/styling :: head-style" ></div>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	    <link href="../../webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-	    <link href="../../css/standard.css" rel="stylesheet">
-	</div>
-</head>
-<body>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Project Mockingbird</title>
 	<div th:replace="/fragments/styling :: body-links" ></div>
-		<script src="../../webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="../../webjars/jquery/1.9.1/jquery.min.js"></script>
+		
     </div>
-
+</head>
 	<body>
 		<div class="container">
 			<div th:replace="./fragments/navbar :: navbar"></div>
@@ -28,4 +20,7 @@
         	<h1>Create a account today! (P.S. It's Free! :")</h1>
 		</div>
 	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="/custom.js"></script>
 </html>

@@ -18,7 +18,6 @@
 
 <body>
 	<div class="container">
-
 		<div th:replace="fragments/navbar"></div>
 		<h2>Users</h2>
 		<div class="list-group" th:each="user:${users}">
@@ -38,28 +37,29 @@
 						<h5 class="mb-1">
 							<span th:text="${tweetCounts.get(user.username)}"></span> tweets
 						</h5>
-
-						<form th:action="@{/follow/} + ${user.username}"
-							th:if="${followingStatus.containsKey(user.username) 
-									&& !followingStatus.get(user.username)}"
-							method="post">
-
-							<button style="float: right" type="Submit"
-								class="btn btn-md btn-success">Follow</button>
-						</form>
-
-						<form th:action="@{/unfollow/} + ${user.username}"
-							th:if="${followingStatus.containsKey(user.username) 
-								&& followingStatus.get(user.username)}"
-							method="post">
-
-							<button style="float: right" type="Submit"
-								class="btn btn-md btn-primary unfollow_btn">Following</button>
-
-						</form>
-
 					</div>
 				</div>
 			</a>
 		</div>
+		...
+		<h5 class="mb-1">
+			<span th:text="${tweetCounts.get(user.username)}"></span> tweets
+		</h5>
+
+		<form th:action="@{/follow/} + ${user.username}"
+			th:if="${followingStatus.containsKey(user.username) && !followingStatus.get(user.username)}"
+			method="post">
+
+			<button style="float: right" type="Submit"
+				class="btn btn-md btn-success">Follow</button>
+		</form>
+
+		<form th:action="@{/unfollow/} + ${user.username}" th:if="${followingStatus.containsKey(user.username)&& followingStatus.get(user.username)}"
+			method="post">
+
+			<button style="float: right" type="Submit"
+				class="btn btn-md btn-primary unfollow_btn">Following</button>
+
+		</form>
 </body>
+</html>

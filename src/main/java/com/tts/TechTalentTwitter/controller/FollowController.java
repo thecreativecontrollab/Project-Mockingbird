@@ -27,7 +27,6 @@ public class FollowController {
 		followers.add(loggedInUser);
 		userToFollow.setFollowers(followers);
 	    userService.save(userToFollow);
-	  
 	    return "redirect:" + request.getHeader("Referer");
 	}
 	@PostMapping(value = "/unfollow/{username}")
